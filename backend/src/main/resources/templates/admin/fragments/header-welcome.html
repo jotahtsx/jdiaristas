@@ -1,0 +1,61 @@
+<header class="header pt-1" th:fragment="header-welcome">
+    <nav class="navbar">
+        <div class="container">
+            <div class="sidebar-toggle">
+                <button id="btn">
+                    <div class="arrow-left"></div>
+                    <span class="text-gray-light-1">Atividades</span>
+                </button>
+            </div>
+            <ul class="nav-data-user">
+                <li>
+                    <input type="checkbox" name="change-theme" id="change-theme" />
+                    <label for="change-theme">
+                        <span class="material-icons sun">
+                            light_mode
+                        </span>
+                        <span class="material-icons moon">
+                            dark_mode
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <div class="header-user-profile">
+                        <img th:src="@{/images/profile.jpg}" alt="">
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="https://google.com">
+                                    Meu perfil
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://youtube.com">
+                                    Sair
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="welcome-data mt-2">
+        <div class="container">
+            <div class="wd-info-person">
+                <div class="wd-user-profile">
+                    <img th:src="@{/images/profile.jpg}" alt="">
+                </div>
+                <div class="wd-user-messages">
+                    <h2 class="text-gray-dark-9">Olá novamente, <b>Jasmim!</b></h2>
+                    <p>De volta ao seu dashboard, que ótimo te ver.</p>
+                </div>
+            </div>
+            <div>
+                <a class="btn btn-gray text-white" href="">relatórios</a>
+                <a class="btn btn-blue text-white" href="">contratos</a>
+            </div>
+        </div>
+    </div>
+</header>

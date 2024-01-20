@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/index.css}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>jdiaristas - serviços</title>
+</head>
+
+<body>
+
+    <th:block th:replace="admin/fragments/header :: header"></th:block>
+    <th:block th:replace="admin/fragments/sidebar :: sidebar"></th:block>
+
+    <main class="main">
+        <div class="container" th:include="${contentTemplate}"></div>
+    </main>
+
+    <script defer th:src="@{/js/index.js}"></script>
+
+</body>
+
+</html>

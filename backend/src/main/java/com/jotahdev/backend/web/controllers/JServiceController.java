@@ -10,11 +10,11 @@ import com.jotahdev.backend.core.models.JService;
 @Controller
 @RequestMapping("/admin/servicos")
 public class JServiceController {
-    
+
     @GetMapping("/cadastrar")
     public ModelAndView create() {
-        var modelAndView = new ModelAndView("admin/service/create");
-
+        ModelAndView modelAndView = new ModelAndView("admin/base");
+        modelAndView.addObject("contentTemplate", "admin/service/create");
         modelAndView.addObject("service", new JService());
 
         return modelAndView;
