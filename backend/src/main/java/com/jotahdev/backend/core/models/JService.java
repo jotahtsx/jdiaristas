@@ -21,6 +21,7 @@ import lombok.Data;
 @Entity(name = "service")
 public class JService {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
