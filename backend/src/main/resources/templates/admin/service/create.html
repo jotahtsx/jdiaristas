@@ -1,97 +1,111 @@
-<div class="row">
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="text" placeholder="Serviço">
+<form method="post" th:object="${service}">
+    <div class="row">
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="text" th:field="*{title}" placeholder="Serviço">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{minimumPrice}" placeholder="Valor Mínimo">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{hoursQuantity}" placeholder="Quantidade de horas">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{commissionPercentage}" placeholder="Porcentagem">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{roomHours}" placeholder="Horas por quarto">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{roomPrice}" placeholder="Valor por quarto">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{livingRoomHours}" placeholder="Horas por sala">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{livingRoomPrice}" placeholder="Valor por sala">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{bathroomHours}" placeholder="Horas por banheiro">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{bathroomPrice}" placeholder="Valor por banheiro">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{kitchenHours}" placeholder="Horas por cozinha">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{kitchenPrice}" placeholder="Valor por cozinha">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{backyardHours}" placeholder="Horas por cozinha">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{backyardPrice}" placeholder="Valor por cozinha">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{othersHours}" placeholder="Horas por quintal">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{othersPrice}" placeholder="Valor por quintal">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{othersHours}" placeholder="Horas por outros">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{othersPrice}" placeholder="Valor por outros">
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <select name="" th:field="*{icon}">
+                    <option th:each="icon: ${icons}" th:text="${icon.title}" th:value="${icon}"></option>
+                </select>
+            </div>
+        </div>
+        <div class="col-6-xs">
+            <div class="input-container">
+                <input type="number" th:field="*{position}" placeholder="Posição">
+            </div>
+        </div>
+        <div class="col-6-xs mb-1">
+            <div class="input-container">
+                <button class="btn btn-green" type="submit">Salvar</button>
+            </div>
         </div>
     </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Valor Mínimo">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Quantidade de horas">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Porcentagem">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Horas por quarto">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Valor por quarto">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Horas por sala">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Valor por sala">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Horas por banheiro">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Valor por banheiro">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Horas por cozinha">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Valor por cozinha">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Horas por quintal">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Valor por quintal">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Horas por outros">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Valor por outros">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Ícone">
-        </div>
-    </div>
-    <div class="col-6-xs">
-        <div class="input-container">
-            <input type="number" placeholder="Posição">
-        </div>
-    </div>
-    <div class="col-6-xs mb-1">
-        <div class="input-container">
-            <button class="btn btn-green" type="submit">Salvar</button>
-        </div>
-    </div>
-</div>
+</form>

@@ -55,6 +55,12 @@ public class JService {
     @Column(name = "bath_room_price", nullable = false)
     private BigDecimal bathroomPrice;
 
+    @Column(name = "kitchen_hours", nullable = false)
+    private Integer kitchenHours;
+
+    @Column(name = "kitchen_price", nullable = false)
+    private BigDecimal kitchenPrice;
+
     @Column(name = "backyard_hours", nullable = false)
     private Integer backyardHours;
 
